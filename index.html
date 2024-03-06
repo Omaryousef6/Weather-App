@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Weather</title>
+  </head>
+  <body id="appWeather">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container p-3">
+        <a class="navbar-brand" href="#">
+          Weather
+          <p>tagline goes here</p></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contanct</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="mySection vh-100 container">
+      <div class="row">
+        <div class="position-relative">
+          <div id="findLocation" class="pb-5">
+            <input
+              id="inputFind"
+              type="text"
+              placeholder="Find Your Location..."
+              class="form-control my-5 border-0 p-3 rounded-5 bg-dark-subtle"
+            />
+          </div>
+          <button id="btnSubmit" class="btn btn-primary rounded-5">
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <div class="parent mt-5 text-white row">
+        <div class="today col-md-4">
+          <div class="one">
+            <div
+              class="headerToday p-2 bg-dark d-flex justify-content-between fw-bold rounded-top-1"
+            >
+              <div id="nameToday">Friday</div>
+              <div id="dataToday">12Junuary</div>
+            </div>
+            <div class="bodyToday px-4">
+              <div id="countryName" class="fw-bolder text-black fs-1 py-3">
+                Cairo
+              </div>
+              <div
+                class="wetherToday d-flex align-items-center justify-content-around"
+              >
+                <div id="tempCtoday">19<sup>o</sup>C</div>
+                <div>
+                  <img
+                    id="imgWeather"
+                    src="./img/Screenshot 2024-01-12 165037.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div id="statusWeather" class="py-3 fw-bold text-black">
+                Partly cloudy
+              </div>
+              <div class="infoWeatherToday py-3 fw-bolder">
+                <span><i class="fa-solid fa-umbrella"></i> 20%</span>
+                <span class="mx-3"><i class="fa-solid fa-wind"></i>18km/h</span>
+                <span><i class="fa-regular fa-compass"></i>East</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="two">
+            <div
+              class="headerTomorrow p-2 text-center fw-bold bg-dark rounded-top-1"
+            >
+              <div id="nameTomorrow">Saturday</div>
+            </div>
+            <div id="dataTomorrow" class="text-center py-5">
+              <!-- <div id="iconTomorrow"><i class="fa-solid fa-sun fs-1"></i></div> -->
+              <img
+                src="./img/Screenshot 2024-01-12 165037.png"
+                id="iconTomorrow"
+                alt=""
+              />
+              <div id="maxTempC" class="mt-3 fw-medium fs-3">
+                5.6<sup>o</sup>C
+              </div>
+              <div id="minTempC" class="pt-2 fw-medium fs-3">1<sup>o</sup></div>
+              <div id="textTomorrow" class="mt-3 fw-bold text-black">
+                Sunnday
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="three">
+            <div
+              class="headerAfterTomorrow p-2 text-center fw-bold bg-dark rounded-top-1"
+            >
+              <div id="nameAfterTomorrow">Sunday</div>
+            </div>
+            <div id="dataAfterTomorrow" class="text-center py-5">
+              <img
+                src="./img/Screenshot 2024-01-12 165037.png"
+                id="iconAfterTomorrow"
+                alt=""
+              />
+              <div id="maxTempCAfterTomorrow" class="mt-3 fw-medium fs-3">
+                5.9<sup>o</sup>C
+              </div>
+              <div id="minTempCAfterTomorrow" class="pt-2 fw-medium fs-3">
+                1.5<sup>o</sup>
+              </div>
+              <div id="textAfterTomorrow" class="mt-3 fw-bold text-black">
+                Partly cloudy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class=" infoWeather row">
+    <div class="col-4 ">
+      <div class="todayWeather text-muted fw-medium">
+        <div class="headerToday bg-light-subtle d-flex justify-content-between p-2 ">
+          <span>Thursday</span>
+          <span>11January</span>
+        </div>
+        <div class="todayBody bg-dark-subtle p-4">
+          <h4>
+            London
+          </h4>
+          <div class="degree d-flex justify-content-between align-items-center ">
+            <div class="num text-black fw-bolder">
+              4 <sup>o</sup> C
+            </div>
+            <div class="imgNum">
+              <img src="./img/overlay-bg.jpg" alt="" class="">
+            </div>
+          </div>
+          <div class="custom">Partly cloudy</div>
+          <div class="iconSpan">
+            <span>20%</span>
+            <span>18km/h</span>
+            <span>East</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div> -->
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

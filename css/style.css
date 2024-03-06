@@ -1,0 +1,32 @@
+body{
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.561)  0% 100% ) ,  url("/img/Screenshot\ 2024-01-12\ 010527.png");
+  background-size: cover ;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+#btnSubmit{
+  position: absolute;
+  top: 53px;
+  left: 89%;
+  padding: 10px 36px !important;
+}
+
+
+#tempCtoday{
+  font-size:70px !important;
+  font-weight: bolder;
+  
+}
+
+.one ,.two ,.three{
+  background-color: rgba(205, 227, 255, 0.289);
+}
+
+
